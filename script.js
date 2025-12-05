@@ -1,6 +1,7 @@
 const form = document.getElementById('chat-form');
 const input = document.getElementById('user-input');
 const chatBox = document.getElementById('chat-box');
+const modelSelect = document.getElementById('model-select');
 
 const API_URL = 'http://localhost:3000/api/chat';
 
@@ -46,12 +47,17 @@ function parseMarkdown(text) {
 // Fungsi untuk mengirim pesan ke Gemini API
 async function sendMessageToGemini(message) {
   try {
+    const selectedModel = modelSelect.value;
+    
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ message: message }),
+      body: JSON.stringify({ 
+        message: message,
+        model: selectedModel
+      }),
     });
 
     const data = await response.json();
