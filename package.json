@@ -1,0 +1,32 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Gemini AI Chatbot with Express Backend",
+  "main": "backend/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/main.js",
+    "dev": "nodemon backend/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wikan-dev/Gemini-chatbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wikan-dev/Gemini-chatbot/issues"
+  },
+  "homepage": "https://github.com/Wikan-dev/Gemini-chatbot#readme",
+  "dependencies": {
+    "@google/genai": "^1.31.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
